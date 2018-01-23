@@ -1,0 +1,72 @@
+<div class="container-fill bread_cumb_main">
+  <div class="container">
+    <div id="bc1" class="myBreadcrumb">
+    	<a href="#"><div>1.CONFIRM YOUR ITEAMS</div></a>
+    	<a href="#"><div>2.REQUEST QUOTES</div></a>
+    	<a href="#"><div>3.MANAGE QUOTES</div></a>
+      <a href="#"><div>4.ACCEPT QUOTE</div></a>
+      <a href="#"><div>5.MAKE PAYMENT</div></a>
+    </div>
+  </div>
+</div>
+    <div class="container-fill delivery_details_main">
+        <div class="container">
+        <div class="col-md-3">
+            <div class="ordering_main">
+            <h5>You are ordering:</h5>
+            <h2>{{items_number}} items</h2>
+           <p class="cursor"><a (click)="view_edit()">VIEW/EDIT PRODUCTS <i class="fa fa-arrow-right" aria-hidden="true"></i></a></p> 
+        </div>
+        </div>
+        <div class="col-md-7">
+                <div class="ordering_main">
+                        <h5>For Delivery to:</h5>
+                        <h2 class="hacky_landon_txt">Hackney, Landon</h2>
+                       <p class="wrong_area_txt">WRONG AREA? WANT TO PROVIDE AN EXACT ADDRESS? ENTER IT ABOVE TO FIND LOCAL MAKERS..</p> 
+            
+                    </div>
+
+        </div>
+        <div class="col-md-2">
+                <div class="ordering_main">
+                        <h5>Within:</h5>
+                        <h2>2-6 weeks</h2>
+                       <p>OR PICK PREFERRED DATE</p> 
+            
+                    </div>
+
+        </div>
+    </div>
+    </div> <div class="clearfix"></div>
+      <div class="container">
+           <div class="spacer-mini"></div>
+            <button class="btn btn-default confirm_bttn" (click)="pay()">Pay</button>
+            <div class="spacer-mini"></div>
+
+            <div class="spacer-mini"></div>
+        <div class="products_add" *ngFor="let item of checkout;let i=index">
+              
+            <div class="col-md-3">
+                <img [src]="item.imageUrl" alt="title" class="img-responsive product_image">
+            </div>
+            <div class="col-md-7">
+                <div class="product_details">
+                    <h3>{{item.name}}</h3>
+                    <p>Service 1 :{{item.service1}}</p>
+                    <p>Service 2 :{{item.service2}}</p>
+                    <p>Service 3 :{{item.service3}}</p>
+                </div>
+                </div>
+                <div class="col-md-2">
+
+                    <div>
+                        <ul class="list-inline product_add">
+                            <li>
+                                   <h2> {{item.quantity}} <span *ngIf="item.quantity == 1">item</span><span *ngIf="item.quantity > 1">items</span></h2>
+                            </li>
+                        </ul>
+                    </div>
+
+                    </div> <div class="clearfix"></div>
+        </div> <div class="clearfix"></div>
+      </div>

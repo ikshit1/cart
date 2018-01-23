@@ -1,0 +1,265 @@
+/* You can add global styles to this file, and also import other style files */
+.sign_button{
+    border-color: #008c5d;
+    color: #008c5d;
+    font-weight: 700;
+}
+.sign_button:hover{
+    border-color: #008c5d;
+    color: white;
+    font-weight: 700;
+    background: #008c5d;
+}
+.ten_items_text{
+    color: red;
+    border-right: 1px solid #ccc;
+    font-size: 16px;
+}
+ol, ul {
+    margin-top: 0;
+    margin-bottom: 0px;
+}
+.right_list li{
+    padding: 5px 10px;
+}
+.navbar-default {
+    background-color: #fff;
+    border-color: #e7e7e7;
+    /* border: none; */
+    margin-bottom: 0px;
+}
+
+
+
+
+
+
+
+.myBreadcrumb {
+	display: inline-block;
+	/* box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.35); */
+	overflow: hidden;
+	/* border-radius: 5px; */
+}
+
+.myBreadcrumb > * {
+    text-decoration: none;
+    outline: none;
+    display: block;
+    float: left;
+    font-size: 14px;
+    line-height: 29px;
+    color: black;
+    padding: 0 15px 0 15px;
+    background: #f7f7f7;
+    position: relative;
+    transition: all 0.5s;
+    margin: 0px 30px;
+}
+
+.myBreadcrumb > * div {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;    
+}
+
+/*since the first link does not have a triangle before it we can reduce the left padding to make it look consistent with other links*/
+.myBreadcrumb > *:first-child {
+	padding-left: 10px;
+	border-radius: 5px 0 0 5px; /*to match with the parent's radius*/
+}
+
+.myBreadcrumb >*:first-child i {
+    vertical-align: sub;
+}
+
+.myBreadcrumb > *:last-child {
+	border-radius: 0 5px 5px 0; /*this was to prevent glitches on hover*/
+	padding-right: 20px;
+    padding-right: 8px;
+}
+
+/*hover/active styles*/
+.myBreadcrumb a.active, .myBreadcrumb a:hover{
+    /* background: #9EEB62; */
+    
+}
+.myBreadcrumb a.active:after, .myBreadcrumb a:hover:after {
+	/* background: #9EEB62; */
+}
+
+/*adding the arrows for the myBreadcrumbs using rotated pseudo elements*/
+.myBreadcrumb > *:after {
+	content: '';
+	position: absolute;
+	top: 0; 
+	right: -18px;
+    width: 25px;
+    height: 25px;
+	transform: scale(0.707) rotate(45deg);
+    -ms-transform:scale(0.707) rotate(45deg);
+    -webkit-transform:scale(0.707) rotate(45deg);
+	z-index: 1;
+	background: #f7f7f7;
+	/*stylish arrow design using box shadow*/
+	box-shadow: 
+		2px -2px 0 2px rgba(0, 0, 0, 0.4), 
+		3px -3px 0 2px rgba(255, 255, 255, 0.1);
+	border-radius: 0 5px 0 50px;
+    transition: all 0.5s;
+}
+/*we dont need an arrow after the last link*/
+.myBreadcrumb > *:last-child:after {
+	content: none;
+}
+.myBreadcrumb > *:before {
+	/*some styles now*/
+	border-radius: 100%;
+	width: 20px;
+	height: 20px;
+	line-height: 20px;
+	margin: 8px 0;
+	position: absolute;
+	top: 0;
+	left: 30px;
+    background: white;
+	background: linear-gradient(#444, #222);
+	font-weight: bold;
+    box-shadow: 0 0 0 1px #ccc;
+}
+
+.myBreadcrumb > *:nth-child(n+2) {
+  display:none;
+}
+
+
+@media (max-width: 767px) {
+    .myBreadcrumb > *:nth-last-child(-n+4) {
+        display:block;
+    } 
+    .myBreadcrumb > * div {
+        max-width: 100px;
+    }
+}
+
+@media (min-width: 768px) {
+    .myBreadcrumb > *:nth-last-child(-n+6) {
+        display:block;
+    } 
+    .myBreadcrumb > * div {
+        max-width: 200px;
+    }
+}
+.bread_cumb_main{
+    border-bottom:  1px solid #e7e7e7;
+    background: #f7f7f7;
+    padding: 25px 0px 15px 0px;
+}
+.ordering_main h5{
+    font-size: 16px;
+}
+.ordering_main h2{
+    margin-top: 15px;
+}
+.ordering_main p{
+    font-size: 12px;
+}
+.ordering_main p a{
+    color: #018d5c;
+    text-decoration: none;
+    font-weight: 600;
+} 
+.hacky_landon_txt{
+    border-bottom: 1px dashed #ccc;
+}
+.wrong_area_txt{
+    font-size: 12px;
+}
+.delivery_details_main{
+    border-bottom: 1px solid #e7e7e7;
+    padding: 30px 0px 23px;
+    background: white !important;
+}
+body{
+    background: #f7f7f7;
+}
+.products_add{
+    border: 1px solid #e7e7e7;
+    background: white;
+    margin: 18px 0px;
+    padding: 15px 0px 5px;
+    border-radius: 5px;
+}
+.product_image{
+    height: 140px;
+}
+.product_details h3{
+    margin-top: 12px;
+}
+.product_details p{
+    font-size: 16px;
+}
+.product_add{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.product_add li{
+    padding: 10px 10px;
+}
+.configure_btn{
+    width: 134px;
+}
+.spacer-mini{
+    height: 30px;
+}
+.confirm_bttn{
+    float: right;
+    width: 220px;
+    height: 40px;
+    color: white;
+    background: #008c5d;
+    font-weight: 700;
+}
+.confirm_bttn:hover,active{
+    float: right;
+    width: 220px;
+    height: 40px;
+    color: white;
+    background: #008c5d;
+    font-weight: 700;
+}
+.navbar-default .navbar-nav>li>a {
+    color: #777;
+    font-size: 16px;
+}
+.navbar-nav {
+    margin-top: 4px;
+}
+.navbar>.container .navbar-brand, .navbar>.container-fluid .navbar-brand {
+    margin-top: 4px;
+}
+
+/* css for product single */
+.add-cart-btn{
+    width: 134px;
+    margin-top: 36%;
+}
+.cursor{
+    cursor: pointer;
+}
+@media screen and (max-width: 1024px) and (min-width:768px) {
+    .myBreadcrumb > *{
+        margin: 0px 8px;
+    }
+    .product_add li {
+        padding: 10px 8px;
+    }
+}
+
+@media screen and (max-width: 768px) and (min-width:320px) {
+    .add-cart-btn {
+        width: 134px;
+        margin-top: 6%;
+        margin-bottom: 20px;
+    }
+}

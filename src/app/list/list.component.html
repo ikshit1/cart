@@ -1,0 +1,42 @@
+<!-- <div class="container">
+  <div class="page-header">
+    <h1>List of items</h1>      
+  </div>
+  <div>
+    <button (click)="proceed()">Add to Cart</button>
+  </div>
+  <div class="well well-lg" *ngFor="let item of list_array;let i=index">
+    <img class="img_size" [src]="item.imageUrl" alt="">
+    <p>{{item.name}}</p>
+    <button (click)="add_to_cart(item.id,i,item.flag)" *ngIf="!item.flag">Add </button>
+    <button (click)="add_to_cart(item.id,i,item.flag)" *ngIf="item.flag">Remove</button>
+  </div>      -->
+<div class="container">
+            <div class="spacer-mini"></div>
+            <button class="btn btn-default confirm_bttn" (click)="proceed()">Proceed</button>
+            <div class="spacer-mini"></div>
+
+            <div class="spacer-mini"></div>
+        <div class="products_add" *ngFor="let item of list_array;let i=index">
+              
+            <div class="col-md-3">
+                <img  [src]="item.imageUrl" alt="title" class="img-responsive product_image">
+            </div>
+            <div class="col-md-7">
+                <div class="product_details">
+                    <h3>{{item.name}}</h3>
+                    <p>Service 1 :{{item.service1}}</p>
+                    <p>Service 2 :{{item.service2}}</p>
+                    <p>Service 3 :{{item.service3}}</p>
+                </div>
+                </div>
+                <div class="col-md-2">
+
+                    <div>
+                        <button class="btn btn-default sign_button add-cart-btn" (click)="add_to_cart(item.id,i,item.flag)" *ngIf="!item.flag">Add</button>
+                        <button class="btn btn-default sign_button add-cart-btn" (click)="add_to_cart(item.id,i,item.flag)" *ngIf="item.flag">Remove</button>
+                    </div>
+
+                    </div> <div class="clearfix"></div>
+        </div> <div class="clearfix"></div>
+</div>

@@ -1,0 +1,61 @@
+<!-- <div class="container">
+  <div class="page-header">
+    <h1>Cart</h1>      
+  </div>
+  <div>
+    <button (click)="proceed()">Checkout</button>
+  </div>
+  <div *ngIf="items_selected.length >0">
+    <div class="well well-lg" *ngFor="let item of items_selected;let i=index">
+    <img class="img_size" [src]="item.imageUrl" alt="">
+    <p>{{item.name}}</p>
+    <p>{{item.quantity}}</p>
+    <button (click)="add(item.id,i)">Add </button>
+    <button (click)="remove(item.id,i)">Minus</button>
+  </div>
+  </div>
+  <div *ngIf="items_selected.length ==0">
+    <H1>Your cart is empty.</H1>
+  </div>
+</div> -->
+
+          <div class="container">
+           <div class="spacer-mini"></div>
+            <button class="btn btn-default confirm_bttn" (click)="checkout()">Checkout</button>
+            <div class="spacer-mini"></div>
+
+            <div class="spacer-mini"></div>
+        <div class="products_add" *ngFor="let item of items_selected;let i=index">
+              
+            <div class="col-md-3">
+                <img [src]="item.imageUrl" alt="title" class="img-responsive product_image">
+            </div>
+            <div class="col-md-7">
+                <div class="product_details">
+                    <h3>{{item.name}}</h3>
+                    <p>Service 1 :{{item.service1}}</p>
+                    <p>Service 2 :{{item.service2}}</p>
+                    <p>Service 3 :{{item.service3}}</p>
+                </div>
+                </div>
+                <div class="col-md-2">
+
+                    <div>
+                        <ul class="list-inline product_add">
+                            <li>
+                                    <button class="btn btn-default sign_button" (click)="remove(item.id,i)">-</button>
+                            </li>
+                            <li>
+                                {{item.quantity}}
+                            </li>
+                            <li>
+                                    <button class="btn btn-default sign_button" (click)="add(item.id,i)">+</button>
+                            </li>
+                        </ul>
+
+                        <button class="btn btn-default sign_button configure_btn">Configure</button>
+                    </div>
+
+                    </div> <div class="clearfix"></div>
+        </div> <div class="clearfix"></div>
+                  </div>
